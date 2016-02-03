@@ -4,10 +4,8 @@
  */
 
 const 
-	dotenv	= require('dotenv').load(),
-	aws 		= require('aws-sdk');
-
+	dotenv	= require('dotenv').load();
 
 exports.handler = function (event, context) {
-	return process.env.HELLO
+	context.succeed(process.env.HELLO);
 }
