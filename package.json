@@ -1,0 +1,22 @@
+{
+  "name": "aws-lamdba-poc",
+  "version": "1.0.0",
+  "description": "POC for NodeJS AWS Lambda Handler with dependencies",
+  "main": "test.js",
+  "scripts": {
+    "start": "node test.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package" : "rm package.zip; zip -r -q package.zip handler.js .env node_modules/*",
+    "listpkg" : "unzip -l package.zip | more"
+
+  },
+  "author": "",
+  "engines": {
+    "node": ">=0.10.36"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.2.33",
+    "dotenv": "^2.0.0"
+  }
+}
